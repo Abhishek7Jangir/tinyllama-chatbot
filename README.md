@@ -24,7 +24,7 @@ This is a foundational project — a starting point for learning how LLM-based c
 6. The response is displayed and appended to the session's message history
 7. If the message history has grown beyond 11 entries, the oldest user/assistant pair is removed (the system prompt at the start is never removed) to keep the context window bounded
 
-## Known Limitations (Honest Assessment)
+## Known Limitations
 
 - The context window is trimmed by **message count**, not actual token count — for very long individual messages, this could still exceed the model's real token limit. A token-aware trimming approach would be more robust.
 - No summarization of dropped context — older turns are simply discarded rather than condensed, so long conversations lose earlier context entirely rather than retaining a compressed version of it.
